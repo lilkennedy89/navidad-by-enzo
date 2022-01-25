@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #669119;
+}
+
+.bola1 {
+    grid-area: bola1;
+}
+
+.bola2 {
+    grid-area: bola2;
+}
+
+.tittle {
+    grid-area: tittle;
+}
+
+.tittle2 {
+    grid-area: tittle2;
+}
+
+.texto {
+    grid-area: texto;
+}
+
+.arbol {
+    grid-area: arbol;
+}
+.muneco {
+    grid-area: muneco;
+}
+
+.muneco2 {
+    grid-area: muneco2;
+}
+
+.grid-container {
+    text-align: center;
+    display: grid;
+    height: 100vh;
+    gap: 5px;
+    width: auto;
+    grid-template: 
+    "bola1    tittle   bola2"   150px
+    "tittle2  tittle2  tittle2" 50px
+    "texto    texto    texto"   50px
+    "muneco2   arbol    muneco"   auto /
+    200px      auto     200px;
+
+}
+
+
+/*bola-1---inicio*/
+.bola1 img {
+    width: 80px;
+    height: 130px;
+}
+/*bola-1---inicio*/
+
+/*bola-2--inicio*/
+.bola2 img {
+    width: 80px;
+    height: 130px;
+}
+/*bola-2--inicio*/
+
+/*titulo---inicio*/
+.tittle h1 {
+    margin-top: 20px;
+    font-family: 'Mountains of Christmas', cursive;
+    color: #ed1c24;
+    font-size: 3.5em;
+    cursor: default;
+}
+/*titulo---fin*/
+
+/*titulo 2 ---inicio*/
+.tittle2 h2 {
+    font-family: 'Sedgwick Ave', cursive;
+    color: #fefe5b;
+    cursor: default;
+}
+/*titulo 2 ---fin*/
+
+/*texto---inicio*/
+.texto p {
+    font-family: 'Open Sans', sans-serif;
+    color: #8dc5fe;
+    cursor: default;
+}
+/*texto---fin*/
+
+/*arbol--inicio*/
+.arbol img {
+    width: 430px;
+    height: 602px;
+}
+/*arbol--fin*/
+
+/*muñeco1--inicio*/
+.muneco img {
+    width: 200px;
+    height: 160px;
+    margin-top: 190px;
+}
+
+.muneco2 img {
+    width: 200px;
+    height: 160px;
+    margin-top: 400px;
+}
+
+
+/*medi@*/
+@media (max-width: 960px) {
+    .grid-container {
+        text-align: center;
+        display: grid;
+        height: 100vh;
+        gap: 5px;
+        width: auto;
+        grid-template: 
+        "bola1    tittle   bola2"   150px
+        "tittle2  tittle2  tittle2" 50px
+        "texto    texto    texto"   50px
+        "muneco2   arbol    muneco"   auto /
+        200px      auto     200px;
+    
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-container {
+        grid-template: 
+        "bola1    tittle   bola2"   140px
+        "tittle2  tittle2  tittle2" 50px
+        "texto    texto    texto"   auto
+        "arbol    arbol    arbol"   auto /
+        auto      auto     auto;
+    
+    }
+
+    .muneco {
+        grid-area: muneco;
+        display: none;
+    }
+    
+    .muneco2 {
+        grid-area: muneco2;
+        display: none;
+    }
+    
+    .arbol img {
+        width: 370px;
+        height: 542px;
+    }
+    .tittle h1 {
+        margin-top: 10px;
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 370px) {
+    .arbol img {
+        width: 340px;
+        height: 512px;
+    }
+    .tittle h1 {
+        margin-top: 10px;
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 300px) {
+    .arbol img {
+        width: 270px;
+        height: 380px;
+    }
+    .tittle h1 {
+        margin-top: 10px;
+        font-size: 3em;
+    }
+    .grid-container {
+        grid-template: 
+        "tittle   tittle   tittle"   auto
+        "tittle2  tittle2  tittle2" 50px
+        "texto    texto    texto"   auto
+        "arbol    arbol    arbol"   auto /
+        auto      auto     auto;
+    
+    }
+    
+    .bola1 {
+        display: none;
+    }
+    
+    .bola2 {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .grid-container {
+        grid-template: 
+        "bola1    tittle   bola2"   140px
+        "tittle2  tittle2  tittle2" 50px
+        "texto    texto    texto"   auto
+        "arbol    arbol    arbol"   auto /
+        auto      auto     auto;
+    
+    }
+
+    .muneco {
+        grid-area: muneco;
+        display: none;
+    }
+    
+    .muneco2 {
+        grid-area: muneco2;
+        display: none;
+    }
+}
+
+
